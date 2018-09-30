@@ -2,10 +2,10 @@
 
 // colors
 
-$incomplete: #bbb !default;
+$incomplete: #dee1e6 !default;
 $complete: #2dcc70 !default;
 $active: #3598db !default;
-$hover: #5671d0 !default;
+$cancelled: #95a5a5 !default;
 $step-danger: #e84c3d !default;
 $step-warning: #f1c40f !default;
 $step-info: #fe0000 !default;
@@ -121,6 +121,12 @@ $mobile-size: 400px !default;
             @include bubble-style($complete);
         }
     }
+    > li.cancelled {
+        color: $cancelled;
+        .bubble {
+            @include bubble-style($cancelled);
+        }
+    }
 
     // current state
 
@@ -140,11 +146,14 @@ $mobile-size: 400px !default;
     > li.info {
         color: $step-info;
     }
+    > li.cancelled {
+        color: $cancelled;
+    }
 
     // button states
 
     > li a:hover .bubble {
-        @include bubble-style($hover);
+        @include bubble-style($cancelled);
     }
 
     // override states
@@ -156,6 +165,9 @@ $mobile-size: 400px !default;
         @include bubble-style($step-warning);
     }
     > li.info .bubble {
+        @include bubble-style($step-info);
+    }
+    > li.info .cancelled {
         @include bubble-style($step-info);
     }
 

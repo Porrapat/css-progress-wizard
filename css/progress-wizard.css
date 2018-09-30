@@ -40,17 +40,17 @@
   margin: 0;
   position: relative;
   text-overflow: ellipsis;
-  color: #bbb;
+  color: #dee1e6;
   display: block;
 }
 .progress-indicator > li .bubble {
   border-radius: 1000px;
   width: 20px;
   height: 20px;
-  background-color: #bbb;
+  background-color: #dee1e6;
   display: block;
   margin: 0 auto 0.5em auto;
-  border-bottom: 1px solid #888888;
+  border-bottom: 1px solid #a4acba;
 }
 .progress-indicator > li .bubble:before,
 .progress-indicator > li .bubble:after {
@@ -60,7 +60,7 @@
   width: 100%;
   height: 3px;
   content: '';
-  background-color: #bbb;
+  background-color: #dee1e6;
 }
 .progress-indicator > li .bubble:before {
   left: 0;
@@ -90,6 +90,18 @@
   background-color: #2dcc70;
   border-color: #114f2b;
 }
+.progress-indicator > li.cancelled {
+  color: #95a5a5;
+}
+.progress-indicator > li.cancelled .bubble {
+  background-color: #95a5a5;
+  color: #95a5a5;
+  border-color: #4a5757;
+}
+.progress-indicator > li.cancelled .bubble:before, .progress-indicator > li.cancelled .bubble:after {
+  background-color: #95a5a5;
+  border-color: #4a5757;
+}
 .progress-indicator > li.active {
   color: #3598db;
 }
@@ -111,14 +123,17 @@
 .progress-indicator > li.info {
   color: #fe0000;
 }
+.progress-indicator > li.cancelled {
+  color: #95a5a5;
+}
 .progress-indicator > li a:hover .bubble {
-  background-color: #5671d0;
-  color: #5671d0;
-  border-color: #1f306e;
+  background-color: #95a5a5;
+  color: #95a5a5;
+  border-color: #4a5757;
 }
 .progress-indicator > li a:hover .bubble:before, .progress-indicator > li a:hover .bubble:after {
-  background-color: #5671d0;
-  border-color: #1f306e;
+  background-color: #95a5a5;
+  border-color: #4a5757;
 }
 .progress-indicator > li.danger .bubble {
   background-color: #e84c3d;
@@ -144,6 +159,15 @@
   border-color: #650000;
 }
 .progress-indicator > li.info .bubble:before, .progress-indicator > li.info .bubble:after {
+  background-color: #fe0000;
+  border-color: #650000;
+}
+.progress-indicator > li.info .cancelled {
+  background-color: #fe0000;
+  color: #fe0000;
+  border-color: #650000;
+}
+.progress-indicator > li.info .cancelled:before, .progress-indicator > li.info .cancelled:after {
   background-color: #fe0000;
   border-color: #650000;
 }
