@@ -3,12 +3,12 @@
 // colors
 
 $incomplete: #bbb !default;
-$complete: #65d074 !default;
-$active: #337AB7 !default;
+$complete: #2dcc70 !default;
+$active: #3598db !default;
 $hover: #5671d0 !default;
-$step-danger: #d3140f !default;
-$step-warning: #edb10a !default;
-$step-info: #5b32d6 !default;
+$step-danger: #e84c3d !default;
+$step-warning: #f1c40f !default;
+$step-info: #fe0000 !default;
 
 // sizing
 
@@ -70,9 +70,6 @@ $mobile-size: 400px !default;
         text-overflow: ellipsis;
         color: $incomplete;
         display: block;
-        &:hover {
-            color: darken($incomplete, $darken-amount);
-        }
     }
     > li .bubble {
         border-radius: 1000px;
@@ -132,6 +129,16 @@ $mobile-size: 400px !default;
         .bubble {
             @include bubble-style($active);
         }
+    }
+
+    > li.danger {
+        color: $step-danger;
+    }
+    > li.warning {
+        color: $step-warning;
+    }
+    > li.info {
+        color: $step-info;
     }
 
     // button states
